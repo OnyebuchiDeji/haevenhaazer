@@ -269,7 +269,7 @@ var NavItemsScript = function()
                     *  the actual, most likely because of some weird #text element
                     *  So quell it by checking the id as below.
                     */
-                    var project_content = template_content.getElementById("projects-content");
+                    var project_content = document.importNode(template_content.getElementById("projects-content"), true);
 
                     categories_length = project_content.childNodes.length;
                     // console.log(categories_length);
@@ -281,14 +281,14 @@ var NavItemsScript = function()
                             continue;
                         }
                         // console.log(current_category_id);
-                        var current_category = template_content.getElementById(current_category_id);
-                        console.log(current_category);
+                        var current_category = document.importNode(template_content.getElementById(current_category_id), true);
+                        // console.log(current_category);
 
                         var projects_html = ``;
                         var projects_length = current_category.childNodes.length;
 
                         //  For every project of that category
-                        console.log(projects_length);
+                        // console.log(projects_length);
                         for (proj_id = 0; proj_id < projects_length; proj_id++){
                             var current_proj_id = current_category.childNodes[proj_id].id;
                             if (current_proj_id == undefined){
@@ -300,19 +300,18 @@ var NavItemsScript = function()
                             //  Needs to be copy from template
                             //  because I access their child nodes
                             //  and later add
-                            var current_project = template_content.getElementById(current_proj_id);
-                            console.log(current_project);
+                            var current_project = document.importNode(template_content.getElementById(current_proj_id), true);
+                            // console.log(current_project);
 
                             //  Can't get by class name so have to iterate through elements in project div
                             var elements_size = current_project.childNodes.length;
-                            console.log(elements_size);
+                            // console.log(elements_size);
 
                             for (var ele_id=0; ele_id < elements_size; ele_id++){
                                 var current_element = current_project.childNodes[ele_id];
                                 
                                 if (current_element.id == "main_image"){
                                     var mainImageInnerhtml = current_element.innerHTML;
-                                    console.log(mainImageInnerhtml);
                                 }
                                 if (current_element.className == "briefing"){
                                     var briefingInnerhtml = current_element.innerHTML;
@@ -346,9 +345,9 @@ var NavItemsScript = function()
                             ${category_project_html}
                         </div>
                     `;
+                    targetElement.innerHTML += category_project_html;
                 }
                 done=true;
-                targetElement.innerHTML += category_project_html;
                 //  If the processes for the navitem that was clicked 
                 //  are done, break.
                 if (done){
