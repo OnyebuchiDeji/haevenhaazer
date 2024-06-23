@@ -51,8 +51,8 @@ function loadProjectDetails(callerId)
         <h3>${source_element.parentElement.id.toUpperCase()} PROJECT</h3>
     `;
 
-    console.log(typeof source_element);
-    console.log(source_element);
+    // console.log(typeof source_element);
+    // console.log(source_element);
     // console.log(typeof heading_html);
 
     var targetElement = document.getElementById("home_html");
@@ -346,8 +346,8 @@ var NavItemsScript = function()
                         </div>
                     `;
                     targetElement.innerHTML += category_project_html;
+                    done=true;
                 }
-                done=true;
                 //  If the processes for the navitem that was clicked 
                 //  are done, break.
                 if (done){
