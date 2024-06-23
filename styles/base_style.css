@@ -1,0 +1,103 @@
+/**
+    Date: thurs-6-June-2024.
+    
+*/
+/*
+    The below was slower; when I refreshed, th fallback font
+    is displayed before finally loading the below
+    imported font.
+    So to speed it up, I put it in the html.
+    Note how in the html it has `rel="preconnect"`.
+    This makes the browser treat it as high priority.
+    But here, i do something that removes the need for
+    using html to load the font.
+    I use `@font-face`.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@font-face {
+    font-family: 'Your Font';
+    src: url('your-font.woff2') format('woff2');
+    /* Swap: fallback font displays immediately until custom font loads 
+    completely */
+    font-display: swap;
+    /* The browser waits for a short period for the custom font to load
+        If it doesn't, fallback is displayed*/
+    font-display: block;
+    /* Like `swap` but has a longer block period before falling back */
+    font-display: fallback;
+    /* gives browser liberty to decide on best option based on user preferences
+    and network conditions */
+    font-display: optional;
+}
+
+
+:root{
+    --borderColor1: #e5e7eb;
+    --borderColor2: #ddd;
+
+    --fontWeightParagraph: 400;
+    --fontWeightSubheading: 500;
+}
+
+p
+{
+    font-weight: var(--fontWeightParagraph);
+}
+
+h3
+{
+    font-weight: var(--fontWeightSubheading);
+}
+
+.lightBG
+{
+    --bg-opacity: 1;
+    --bgColorMain: rgb(229 231 235 / var(--bg-opacity));
+    --bgColorRel1: rgb(244 244 245 / var(--bg-opacity));
+    --bgColorRel2: rgb(212 220 216 / var(--bg-opacity));
+    --fontColor1: black;
+    --fontColor2: #111;
+    --borderColor1: #e5e7eb;
+    --borderColor2: #ddd;
+    --iconColor: lavender;
+    --iconBorder: lightgray;
+    /* --listItemBGCol: lavender; */
+
+}
+
+.darkBG
+{
+    --bg-opacity: 1;
+    --bgColorMain: rgb(25 28 30 / var(--bg-opacity));
+    --bgColorRel1: rgb(35 37 39 / var(--bg-opacity));
+    --bgColorRel2: rgb(34 36 38 / var(--bg-opacity));
+    --fontColor1: whitesmoke;
+    --fontColor2: gainsboro;
+    --borderColor1: #232333;
+    --borderColor2: #232323;
+    --iconColor: beige;
+    --iconBorder: ivory;
+    /* --listItemBGCol: ; */
+}
+
+/*
+    This makes the navbars and others take the complete
+    width and height of screen.
+*/
+*
+{
+    margin: 0px;
+    padding: 0px;
+    transition: 0.25s;
+}
+
+body
+{
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bgColorMain);
+    color: var(--fontColor1);
+    /* color: i; */
+    /* color: var(--fontColor1); */
+}

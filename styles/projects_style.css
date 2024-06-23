@@ -1,0 +1,205 @@
+/* 
+    Dates: Fri-7-June-2024, sun-9-June-2024
+*/
+
+/*  ############################# */
+/*      For the Projects List     */
+/*  ############################# */
+#projects-content{
+    margin:auto;
+    
+    /* border: 2px solid red; */
+}
+
+#projects-content .project_details:nth-child(n)
+{
+    background-color: var(--bgColorMain);
+}
+
+#projects-content .project_details:nth-child(2n)
+{
+    background-color: var(--bgColorRel2);
+}
+
+/* #projects-content h2 */
+#projects-content h2
+{
+    text-align: left;
+    /* border: 2px solid royalblue; */
+}
+
+#projects-content p
+{
+    padding: 0 1.2%;
+    /* text-decoration: none; */
+    /* border: 2px solid saddlebrown; */
+}
+
+#projects-content div{
+    /* margin: auto; */
+    padding: auto;
+}
+
+#projects-content img{
+    width: 95%;
+}
+    
+/* Polaroid-Like */
+#projects-content .Project
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: .65s;
+}
+
+/* For Hover Effects */
+#projects-content img:hover
+{
+    opacity: 0.75;
+    /* filter:saturate(7);
+    filter:sepia(7); */
+    filter:drop-shadow(5px 5px 15px maroon);
+}
+
+
+/* Make every div have grid display */
+#projects-content div.projects_list
+{
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+}
+#projects-content div.projects_list div:nth-child(n)
+{
+    background-color: var(--bgColorRel1);
+}
+
+#projects-content div.projects_list div:nth-child(2n)
+{
+    background-color: var(--bgColorRel2);        
+}
+/* For every project in the grid */
+#projects-content div.projects_list div
+{
+    margin: 2.5%;
+    padding: 1.5%;
+    text-align: center;
+    
+    /* border: 2px solid purple; */
+}
+
+
+
+/*  ################################## */
+/*    For the Each Project's Details   */
+/*  ################################## */
+
+#project-content
+{
+    /* margin:auto; */
+    /* border: 2px solid red; */
+}
+
+#project-content div:nth-child(n)
+{
+    margin: 0.4% 0% 0.65% 0%;
+    /* border: 2px solid red; */
+}
+
+/* For Relative Colouring */
+#project-content div:nth-child(n)
+{
+    background-color: var(--bgColorMain);
+}
+#project-content div:nth-child(2n)
+{
+    background-color: var(--bgColorRel1);
+}
+
+#project-content div.briefing :nth-child(1)
+{
+    margin: 1.5%;
+}
+
+#project-content div.briefing :nth-child(2)
+{
+    margin: 0.2% 1.5%;
+    /* border: 2px solid green; */
+}
+
+#project-content div.content section:nth-child(n)
+{
+    margin: 1.5% 0%;
+}
+
+#project-content div.content p
+{
+    margin: 0.6% 0.5% 0.65% 1.5%;
+
+    /* border: 2px solid orange; */
+}
+
+#project-content div{
+    margin: auto;
+    /* border: 2px solid magenta; */
+}
+
+#project-content h2
+{
+    text-align: center;
+}
+
+#project-content h3
+{
+    margin: 1.5%;
+    font-weight: var(--fontWeightSubheading);
+
+    /* border: 2px solid yellow; */
+}
+
+#project-content ol
+{
+    list-style-type: decimal;
+    margin: 1.5%;
+    /* border: 2px solid maroon; */
+}
+
+#project-content ol li
+{
+    margin: 0.2% 0.5%;
+    /* border: 2px solid green; */
+}
+
+
+
+#project-content div.content :nth-child(n) img
+{
+    margin: 1.5% 0.85%;
+}
+
+#project-content img
+{
+    width: 48%;
+    /* Because non of the align rules work */
+    /* margin: 0.5%; */
+}
+
+#project-content div.content img:nth-child(:nth-child(n))
+{
+    float: left;
+}
+#project-content img :nth-child(:nth-child(2n))
+{
+    float: right;
+}
+
+/* Relatively Color These Sections */
+#project-content div.content div.section:nth-child(n)
+{
+
+    background-color: var(--bgColorMain);   
+}
+
+#project-content div.content div.section:nth-child(2n)
+{
+    background-color: var(--bgColorRel1);   
+}

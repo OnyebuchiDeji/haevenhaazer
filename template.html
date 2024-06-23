@@ -1,0 +1,194 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- This makes the current page got to a new page anytime once it loads -->
+    <!-- <meta http-equiv="refresh" content="delay_time; URL=new_website_url" /> -->
+
+    <title>Main</title>
+
+    <!-- External -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet"> -->
+    <!-- ################## -->
+
+    <link rel="stylesheet" href="styles/base_style.css">
+    <link rel="stylesheet" href="styles/navbar_style.css">
+    <link rel="stylesheet" href="styles/main_content_style.css">
+    <link rel="stylesheet" href="styles/projects_style.css">
+
+    <!--
+        Though they act almost module-like, there's no need
+        to add `type="module"` as it requires a server-side
+        environment that uses url-based navigation to import the JS
+        into other JavaScripts.
+        It turns out that to access variables and functions in prior scripts...
+        I just have to add them before the scripts that use them like this.
+    -->
+    <script src="scripts/navbar_items_script.js"></script>
+    <script src="scripts/load_templates_script.js" defer></script>
+    <script src="scripts/theme_btn_script.js" defer></script>
+    <script src="scripts/navbar_btn_script.js" defer></script>
+</head>
+
+<!--
+        This shows the overview structure of my document
+        The templates below will be added to the appropriate DOM
+    -->
+
+<body class="lightBG" onresize="topbar_onResize()">
+
+    <div id="topbar_html" class="load-target"></div>
+
+    <div id="main">
+        <div id="home_html" class="load-target content_html"></div>
+    </div>
+
+    <div id="footbar_html" class="load-target"></div>
+
+</body>
+
+<template id="home-template" class="load-source">
+    <div id="home-content">
+        {home}
+        <!-- <div class="grid">
+                <div class="logo-image">HaEven</div>
+                <div class="text" align>
+                    
+                    
+                </div>
+            </div> -->
+    </div>
+
+</template>
+
+<template id="about-template" class="load-source">
+    <div id="about-content">
+
+        {about}
+
+    </div>
+</template>
+
+<!-- <template id="projects_list-template" class="load-source">
+    <div id="projects_list-content">
+        projects_list
+    </div>
+</template> -->
+
+<template id="topbar_icons-template">
+
+    <!-- //  Sun -->
+    <svg id="theme_icon-sun" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+        fill="currentColor" viewBox="0 0 24 24">
+        <path fill-rule="evenodd"
+            d="M13 3a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0V3ZM6.343 4.929A1 1 0 0 0 4.93 6.343l1.414 1.414a1 1 0 0 0 1.414-1.414L6.343 4.929Zm12.728 1.414a1 1 0 0 0-1.414-1.414l-1.414 1.414a1 1 0 0 0 1.414 1.414l1.414-1.414ZM12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm-9 4a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2H3Zm16 0a1 1 0 1 0 0 2h2a1 1 0 1 0 0-2h-2ZM7.757 17.657a1 1 0 1 0-1.414-1.414l-1.414 1.414a1 1 0 1 0 1.414 1.414l1.414-1.414Zm9.9-1.414a1 1 0 0 0-1.414 1.414l1.414 1.414a1 1 0 0 0 1.414-1.414l-1.414-1.414ZM13 19a1 1 0 1 0-2 0v2a1 1 0 1 0 2 0v-2Z"
+            clip-rule="evenodd" />
+    </svg>
+
+    <!-- Moon -->
+    <svg id="theme_icon-moon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+        fill="currentColor" viewBox="0 0 24 24">
+        <path fill-rule="evenodd"
+            d="M11.675 2.015a.998.998 0 0 0-.403.011C6.09 2.4 2 6.722 2 12c0 5.523 4.477 10 10 10 4.356 0 8.058-2.784 9.43-6.667a1 1 0 0 0-1.02-1.33c-.08.006-.105.005-.127.005h-.001l-.028-.002A5.227 5.227 0 0 0 20 14a8 8 0 0 1-8-8c0-.952.121-1.752.404-2.558a.996.996 0 0 0 .096-.428V3a1 1 0 0 0-.825-.985Z"
+            clip-rule="evenodd" />
+    </svg>
+
+    <!-- //  top bar Close -->
+    <svg id="topbar-close_icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+        viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M6 18 17.94 6M18 18 6.06 6" />
+    </svg>
+
+    <!-- //  Normal top bar button -->
+    <svg id="topbar-open_icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+        viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h10" />
+    </svg>
+
+</template>
+
+<template id="topbar-template" class="load-source">
+    <div id="topbar-content">
+        <div>
+            <a id="website_logo" class="topbar flex flex-row">HaEvenhaazer</a>
+            <!-- 
+                      Navbar ICON for when resizing 
+                    open indicates whether the toggle button is clicked.
+                    Then open is removed, meaning now, close button is being...
+                    displayed.
+                -->
+            <button id="topbar-btn" class="open hidden" onClick="btn_toggleTopbar()" type="button">
+
+            </button>
+        </div>
+
+        <nav id="topbar_nav_item" class="navbar-items">
+            <a href="#" class="navbar-item">Home</a>
+            <a href="#" class="navbar-item">About</a>
+            <a href="#" class="navbar-item">Projects</a>
+            <!--
+                    Discovered something crazy: nav elements only take links
+                    They won't display any other element
+                -->
+            <a id="theme_btn" onClick="btn_toggleTheme()">
+                <!-- //  Moon -->
+            </a>
+        </nav>
+    </div>
+</template>
+
+<template id="footbar-template" class="load-source">
+    <div id="footbar-content">
+        <nav class="navbar-items">
+            <a href="#" class="navbar-item">Home</a>
+            <a href="#" class="navbar-item">About</a>
+            <a href="#" class="navbar-item">Projects</a>
+        </nav>
+
+        <!-- Target _blank makes it go to a blank page to load the url -->
+        <div id="social_media_links" target="_blank">
+            <!-- //  IG -->
+            <a href="#">
+                <svg id="instagram" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    fill="none" viewBox="0 0 24 24">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
+                        clip-rule="evenodd" />
+                </svg>
+            </a>
+
+            <!-- //  LinkedIn   -->
+            <a href="https://www.linkedin.com/in/ebenezer-ayo-metibemu-93392626b/" target="_blank">
+                <svg id="linkedin" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    fill="currentColor" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd"
+                        d="M12.51 8.796v1.697a3.738 3.738 0 0 1 3.288-1.684c3.455 0 4.202 2.16 4.202 4.97V19.5h-3.2v-5.072c0-1.21-.244-2.766-2.128-2.766-1.827 0-2.139 1.317-2.139 2.676V19.5h-3.19V8.796h3.168ZM7.2 6.106a1.61 1.61 0 0 1-.988 1.483 1.595 1.595 0 0 1-1.743-.348A1.607 1.607 0 0 1 5.6 4.5a1.601 1.601 0 0 1 1.6 1.606Z"
+                        clip-rule="evenodd" />
+                    <path d="M7.2 8.809H4V19.5h3.2V8.809Z" />
+                </svg>
+            </a>
+
+        </div>
+
+        <p id="copyright_info">
+            {copyright}
+        </p>
+
+    </div>
+</template>
+
+<!-- All the Projects Here -->
+<template id="projects-template" class="load-source">
+    <div id="projects-content">
+        {all_projects}
+    </div>
+</template>
+
+</html>

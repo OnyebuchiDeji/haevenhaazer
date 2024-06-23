@@ -1,0 +1,36 @@
+
+
+#main
+{
+    padding:0px;
+    margin: 0px;
+}
+
+h1, h2{
+    text-align: center;
+}
+#main .content_html
+{
+    padding: 0%;
+
+    margin: 0px;
+}
+
+#main .content_html :nth-child(n)
+{
+    /* padding: auto;*/
+    /* border: 2px solid blue; */
+    /* margin: auto; */
+}
+
+
+#main h1, #main h2, #main h3
+{
+    margin: 1.5%;
+}
+
+#main p
+{
+    /* font-size: 0.5rem; */
+    margin: 1.5%;
+}
