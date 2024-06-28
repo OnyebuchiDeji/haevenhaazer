@@ -125,6 +125,7 @@ function load_topbar_btn()
 function main()
 {
     load_topbar_btn();
+    topbar_onResize();
 }
 
 main();
