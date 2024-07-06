@@ -87,11 +87,6 @@
     /* border: 2px solid purple; */
 }
 
-#projects-content div.projects_list .img_grid
-{
-    display: grid;
-    grid-template-columns: repeat(2 ,1fr);
-}
 
 /*  ################################## */
 /*    For the Each Project's Details   */
@@ -99,111 +94,59 @@
 
 #project-content
 {
-    /* margin:auto; */
-    /* border: 2px solid red; */
+    
 }
 
-#project-content div:nth-child(n)
-{
-    margin: 0.4% 0% 0.65% 0%;
-    /* border: 2px solid red; */
-}
 
 /* For Relative Colouring */
-#project-content div:nth-child(n)
-{
-    background-color: var(--bgColorMain);
-}
-#project-content div:nth-child(2n)
+/* #project-content p:nth-child(n)
 {
     background-color: var(--bgColorRel1);
 }
-
-#project-content div.briefing :nth-child(1)
+#project-content p:nth-child(2n)
 {
-    margin: 1.5%;
-}
+    background-color: var(--bgColorMain);
+} */
 
-#project-content div.briefing :nth-child(2)
-{
-    margin: 0.2% 1.5%;
-    /* border: 2px solid green; */
-}
-
-#project-content div.content section:nth-child(n)
-{
-    margin: 1.5% 0%;
-}
-
-#project-content div.content p
-{
-    margin: 0.6% 0.5% 0.65% 1.5%;
-
-    /* border: 2px solid orange; */
-}
-
-#project-content div{
-    margin: auto;
-    /* border: 2px solid magenta; */
-}
 
 #project-content h2
 {
     text-align: center;
+    margin: 0.25%;
 }
 
 #project-content h3
 {
-    margin: 1.5%;
     font-weight: var(--fontWeightSubheading);
-
-    /* border: 2px solid yellow; */
-}
-
-#project-content ol
-{
-    list-style-type: decimal;
-    margin: 1.5%;
-    /* border: 2px solid maroon; */
-}
-
-#project-content ol li
-{
-    margin: 0.2% 0.5%;
-    /* border: 2px solid green; */
 }
 
 
-
-#project-content div.content :nth-child(n) img
-{
-    margin: 1.5% 0.85%;
+#project-content div{
+    margin: auto;
 }
 
-#project-content img
+
+#project-content div#images
 {
-    width: 48%;
-    /* Because non of the align rules work */
-    /* margin: 0.5%; */
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    justify-items: center;
+    gap: 0.25%;
 }
 
-#project-content div.content img:nth-child(:nth-child(n))
+#project-content #main_image
 {
-    float: left;
-}
-#project-content img :nth-child(:nth-child(2n))
-{
-    float: right;
+    text-align: center;
 }
 
-/* Relatively Color These Sections */
-#project-content div.content div.section:nth-child(n)
+#project-content div#main_image img
 {
-
-    background-color: var(--bgColorMain);   
+    width: 90%;
+    /* padding: auto; */
 }
 
-#project-content div.content div.section:nth-child(2n)
+
+#project-content div#images img
 {
-    background-color: var(--bgColorRel1);   
+    width: 95%;
 }

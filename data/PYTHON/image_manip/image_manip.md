@@ -13,6 +13,13 @@ Date Started:
     <img src="data/PYTHON/image_manip/resources/image_manip_res_3.png"/>
 </div>
 
+<div id="images">
+    <img src="data/PYTHON/image_manip/resources/image_manip_res_1.png"/>
+    <img src="data/PYTHON/image_manip/resources/image_manip_code_1.png"/>
+    <img src="data/PYTHON/image_manip/resources/image_manip_res_2.png"/>
+    <img src="data/PYTHON/image_manip/resources/image_manip_code_2.png"/>
+</div>
+
 ### Elaboration
 <p class="elaboration">
 I did this to exactly replicate that done in Javascript.

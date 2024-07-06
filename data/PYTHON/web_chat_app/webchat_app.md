@@ -9,12 +9,14 @@ A web application requiring no authentication and enabling live communication wi
 
 <div id="main_image">
     <img src="data/PYTHON/web_chat_app/resources/web_chat_app_res_1.png"/>
-    <img src="data/PYTHON/web_chat_app/resources/web_chat_app_code_1.png"/>
-    <img src="data/PYTHON/web_chat_app/resources/web_chat_app_code_2.png"/>
-    <img src="data/PYTHON/web_chat_app/resources/web_chat_app_code_4.png"/>
-
 </div>
 
+<div id="images">
+    <img src="data/PYTHON/web_chat_app/resources/web_chat_app_code_1.png"/>
+    <img src="data/PYTHON/web_chat_app/resources/web_chat_app_res_2.png"/>
+    <img src="data/PYTHON/web_chat_app/resources/web_chat_app_code_2.png"/>
+    <img src="data/PYTHON/web_chat_app/resources/web_chat_app_res_3.png"/>
+</div>
 
 
 ### Elaboration

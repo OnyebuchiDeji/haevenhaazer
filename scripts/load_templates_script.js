@@ -9,8 +9,8 @@
 
 //  The alternative for imports
 var navItemsScript = new NavItemsScript();
-var loadProjectDetailsFuncRef = (category, callerId)=>{
-    loadProjectDetails(category, callerId);
+var loadProjectDetailsFuncRef = (callerId)=>{
+    loadProjectDetails(callerId);
     // console.log("called!");
 };
 
@@ -60,17 +60,19 @@ function readHTMLTemplate()
             if (id.includes(keywords[j])){
                 //  For every source element to load from into target
                 for (var k=0; k < loadSourceTemplate.length; k++){
-                    // if (loadTargetElements[i].id === "home_html"){
-                    //     if (localStorage.getItem(localStoreKey).length > 0 || localStorage.getItem(localStoreKey) != undefined){
-                    //         loadTargetElements[i].innerHTML = localStorage.getItem(localStoreKey);
-                    //         console.log("Local Store: " + localStorage.getItem(localStoreKey).length);
-                    //         //  If the element loaded has id 'projects'
-                    //         if (loadTargetElements[i].firstElementChild.id.includes("projects")){
-                    //             navItemsScript.loadProjectsList();
-                    //         }
-                    //     }
-                    //     break;  //  If it's finished loading
-                    // }
+                    if (loadTargetElements[i].id === "home_html"){
+                        
+                        if (localStorage.getItem(localStoreKey).length > 0 || localStorage.getItem(localStoreKey) != undefined){
+                            loadTargetElements[i].innerHTML = localStorage.getItem(localStoreKey);
+                            navItemsScript.registerNavbarItemsClickEvent();
+                            //  If the element loaded has id 'projects'
+                            if (loadTargetElements[i].firstElementChild.id == "projects-content"){
+                                navItemsScript.loadContent_v2("projects");
+                            }
+                        }
+                        ;  //  If it's finished loading
+                        
+                    }
                     //  If that source element has the keyword too
                     //  and The current target element is not "home_html"
                     if (loadSourceTemplate[k].id.includes(keywords[j])){

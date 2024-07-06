@@ -29,7 +29,7 @@ function switchToDarkTheme()
     var iconElement = htmlContentCopy.getElementById("theme_icon-sun").outerHTML;
     document.getElementById("theme_btn").innerHTML = iconElement;
     localStorage.setItem("dark_theme", true);
-    console.log("Switched to dark! " + localStorage.getItem("dark_theme"));
+    // console.log("Switched to dark! " + localStorage.getItem("dark_theme"));
 }
 
 function switchToLightTheme()
@@ -43,7 +43,7 @@ function switchToLightTheme()
     var iconElement = htmlContentCopy.getElementById("theme_icon-moon").outerHTML;
     document.getElementById("theme_btn").innerHTML = iconElement;
     localStorage.setItem("dark_theme", false);
-    console.log("Switched to light! " + localStorage.getItem("dark_theme"));
+    // console.log("Switched to light! " + localStorage.getItem("dark_theme"));
 }
 
 //  Hook
@@ -67,7 +67,7 @@ function btn_toggleTheme()
         document.getElementById("theme_btn").innerHTML = iconElement;
         localStorage.setItem("dark_theme", false);
     }
-    console.log("Toggled! " + localStorage.getItem("dark_theme"));
+    // console.log("Toggled! " + localStorage.getItem("dark_theme"));
 }
 
 function loadIcon()

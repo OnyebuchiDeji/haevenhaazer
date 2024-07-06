@@ -16,6 +16,8 @@ var g_NavItems;
 var cssChangeClassName = "resized";
 var removed = false;
 
+var navItemsScript = new NavItemsScript();
+
 function topbar_onResize()
 {
     var bodyElement = document.querySelector("body");
@@ -72,6 +74,7 @@ function addTopbarNavItems()
     navItemsParent.innerHTML += g_NavItems;
     //  Add class resized to change CSS styling
     document.getElementById("topbar-content").classList.add(cssChangeClassName);
+    navItemsScript.registerNavbarItemsClickEvent();
 }
 function removeTopbarNavItems()
 {

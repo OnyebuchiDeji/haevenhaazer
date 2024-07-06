@@ -11,10 +11,15 @@ This app demonstrates a scenario, for example, that companies use to keep track 
 
 <div id="main_image">
     <img src="data/PYTHON/fullstack_web_app/resources/fullstack_app_res_1.png"/>
+</div>
+
+<div id="images">
     <img src="data/PYTHON/fullstack_web_app/resources/fullstack_app_code_1.png"/>
     <img src="data/PYTHON/fullstack_web_app/resources/fullstack_app_res_2.png"/>
     <img src="data/PYTHON/fullstack_web_app/resources/fullstack_app_code_2.png"/>
+    <img src="data/PYTHON/fullstack_web_app/resources/fullstack_app_res_3.png"/>
 </div>
+
 
 
 

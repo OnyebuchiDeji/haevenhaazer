@@ -7,15 +7,17 @@ A web application with secure user login authentication using password and usern
 <!-- Date Started:  -->
 </p>
 
+
 <div id="main_image">
     <img src="data/PYTHON/flask_web_app/resources/flask_web_app_res_1.png"/>
+</div>
+
+<div id="images">
     <img src="data/PYTHON/flask_web_app/resources/flask_web_app_code_1.png"/>
     <img src="data/PYTHON/flask_web_app/resources/flask_web_app_res_2.png"/>
     <img src="data/PYTHON/flask_web_app/resources/flask_web_app_res_3.png"/>
-
+    <img src="data/PYTHON/flask_web_app/resources/flask_web_app_res_4.png"/>
 </div>
-
-
 
 ### Elaboration
 <p class="elaboration">

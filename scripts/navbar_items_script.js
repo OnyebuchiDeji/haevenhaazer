@@ -34,7 +34,7 @@
 var localStoreKey = "recentHomeContent";
 
 var resourceDir = "../resources/";
-// var projectDetailsId = "current_proj_dets";
+// var currentProjectKey = "curProj";
 
 
 function loadProjectDetails(callerId)
@@ -47,20 +47,26 @@ function loadProjectDetails(callerId)
 
     var copy = document.importNode(source_element, true);
     //  Get the Heading from its immediate parent:
-    var heading_html = `
-        <h3>${source_element.parentElement.id.toUpperCase()} PROJECT</h3>
+    var heading_html = document.createElement("h3");
+    heading_html.innerText += `
+        ${source_element.parentElement.id.toUpperCase()} PROJECT
     `;
 
+    var project_content = document.createElement("div");
+    project_content.id = "project-content";
+
+    project_content.appendChild(heading_html);
+    project_content.appendChild(copy);
     // console.log(typeof source_element);
     // console.log(source_element);
     // console.log(typeof heading_html);
 
+
     var targetElement = document.getElementById("home_html");
 
     targetElement.innerHTML = "";
-    targetElement.innerHTML += heading_html;
-    // targetElement.appendChild(heading_html);
-    targetElement.appendChild(copy);
+
+    targetElement.appendChild(project_content);
 
     localStorage.setItem(localStoreKey, targetElement.innerHTML);
     //  Store 
@@ -78,7 +84,7 @@ var NavItemsScript = function()
     {
         var templateLoadSources = document.getElementsByClassName("load-source");
         var done = false;
-        console.log(templateLoadSources);
+        // console.log(templateLoadSources);
         //  For every template source
         for (var i=0; i < templateLoadSources.length; i++){
             //  Get id
@@ -323,7 +329,7 @@ var NavItemsScript = function()
                             //  For each project of a category
                             projects_html += `
                                 <div class="project">
-                                <div id="${current_proj_id}" class="img_grid" onclick="loadProjectDetails(this.id)">
+                                <div id="${current_proj_id}" onclick="loadProjectDetails(this.id)">
                                 ${mainImageInnerhtml}
                                 </div>
                                 ${titleInnerhtml}
@@ -346,6 +352,7 @@ var NavItemsScript = function()
                         </div>
                     `;
                     targetElement.innerHTML += category_project_html;
+                    localStorage.setItem(localStoreKey, targetElement.innerHTML);
                     done=true;
                 }
                 //  If the processes for the navitem that was clicked 
