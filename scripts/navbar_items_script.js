@@ -323,7 +323,7 @@ var NavItemsScript = function()
                             //  For each project of a category
                             projects_html += `
                                 <div class="project">
-                                <div id="${current_proj_id}" onclick="loadProjectDetails(this.id)">
+                                <div id="${current_proj_id}" class="img_grid" onclick="loadProjectDetails(this.id)">
                                 ${mainImageInnerhtml}
                                 </div>
                                 ${titleInnerhtml}

@@ -87,7 +87,11 @@
     /* border: 2px solid purple; */
 }
 
-
+#projects-content div.projects_list .img_grid
+{
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+}
 
 /*  ################################## */
 /*    For the Each Project's Details   */

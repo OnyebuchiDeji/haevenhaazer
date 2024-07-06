@@ -1,23 +1,28 @@
-<h2 class="title">  Web Chat App
+<h2 class="title">  Live Chatroom App
 </h2>
 ### Briefing
 <p class="briefing">
-A web application with user authentication, a database, and a Notes service.
+A web application requiring no authentication and enabling live communication with sockets-io, and a simple chatting UI that involves generating rooms with random ids that clients can connect to, all hosted by a single server.
 <br>
-Date Started: 
+<!-- Date Started:  -->
 </p>
 
 <div id="main_image">
     <img src="data/PYTHON/web_chat_app/resources/web_chat_app_res_1.png"/>
+    <img src="data/PYTHON/web_chat_app/resources/web_chat_app_code_1.png"/>
+    <img src="data/PYTHON/web_chat_app/resources/web_chat_app_code_2.png"/>
+    <img src="data/PYTHON/web_chat_app/resources/web_chat_app_code_4.png"/>
+
 </div>
+
+
 
 ### Elaboration
 <p class="elaboration">
-It involved the use of Flask, SQLAlchemy, encryption, and hashing to produce a secure web app that is client-oriented and allows secure signing and navigation through the app. It provides a suitable user interface and responses that make interaction livelier, such as Pop up messages to show when a user has logged in or logged out, or when a not has been added.
-Passwords and user information is stored securely on a database that contains hashed data so it cannot be read from the server-side. I use pbkdf2 hashing, which uses SHA-256 repeatedly, with salting to make the hashing more secure.
+It involved the use of Flask, SocketIO, and random room code generation, to produce a  web app that is resembles popular learning interactive platforms such as Nearpod or Kahoot, requiring no password or authentication apart from your desired name and the room code to create it. Or to join an already existing room. This project gives more emphasis to the use of Flask SocketIO to enable live communication between clients, rather than full UI functionality.
 </p>
 
 ###  References
 <p class="references">
-    Tech With Tim, 'Python Website Tutorial - Flask, Auth...', Youtube
+    Tech With Tim, "Python Live Chat Room Tutorial using Flask & SocketIO"
 </p>
