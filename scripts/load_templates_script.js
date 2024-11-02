@@ -70,7 +70,7 @@ function readHTMLTemplate()
                                 navItemsScript.loadContent_v2("projects");
                             }
                         }
-                        ;  //  If it's finished loading
+                        break;  //  If it's finished loading
                         
                     }
                     //  If that source element has the keyword too

@@ -238,7 +238,7 @@ var NavItemsScript = function()
                 //  to get the required nodes and elements.
                 var template_content = document.getElementById(id).content;
                 /**
-                 * Pree that when a templat is gotten using `.getElementById()
+                 * Pree that when a template is gotten using `.getElementById()
                  * one can now use `querySelector` and `getELemenetById()`
                  * to get child nodes.
                  * But `getElementsByClassName()`doesn't work.`
@@ -261,6 +261,7 @@ var NavItemsScript = function()
                 if (navbarItemName.toLowerCase() != "projects"){
                     var templateContentCopy = document.importNode(template_content, true);
                     targetElement.appendChild(templateContentCopy);
+                    localStorage.setItem(localStoreKey, targetElement.innerHTML);
                     done = true;
                 }
                 else{   //  Only for projects
