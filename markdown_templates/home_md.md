@@ -6,8 +6,11 @@ Welcome to my website, which is about me. I made this website to showcase some p
 
 ### About the Web Site
 
-Date of creation of this page: Wednesday 5th June 2024. This is the day I created this html generator from markdown in Python.
-And finished making most of the app.
+Date of creation of this page: Wednesday 5th June 2024. This is the day I created the html generator from markdown in Python and finished making most of the app.
+
+This is however an intermediate site.
+
+Soon, somewhere <b><em>here</b></em> will be a link to my actual Portfolio Website.
 
 
 <br><br>
